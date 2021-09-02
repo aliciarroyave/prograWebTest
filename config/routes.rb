@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :animals
   resources :types
+  resources :habitats
 end
