@@ -2,6 +2,10 @@ class TypesController < ApplicationController
     def index
         @types = Type.all  
 
+        if params[:animal_id]
+            type = Type.find params[:type_id]
+            @types = type.animals 
+        end
         render :ok, json: @types
     end
 

@@ -2,6 +2,10 @@ class HabitatsController < ApplicationController
     def index
         @Habitat = Habitat.all  
 
+        yf params[:animal_id]
+            habitat = Habitat.find params[:type_id]
+            @types = habitat.animals 
+        end
         render :ok, json: @Habitat
     end
 
