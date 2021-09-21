@@ -4,5 +4,6 @@ class Animal < ApplicationRecord
     validates :sexualidad, presence: true
     validates :tamaño, presence: true
 
-
+    has_many :animal_types
+    has_many :types, through :animal_types
 end
