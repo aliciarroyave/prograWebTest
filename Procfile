@@ -1,1 +1,1 @@
-web: rake db:migrate
+web: rials db:migrate
